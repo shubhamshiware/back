@@ -35,7 +35,7 @@ app.use("/templates", templateRoute);
 app.use("/file", fileUploadRoutes);
 
 const mongoUri =
-  "mongodb+srv://dipanshuraghuwanshi:5Fma3u7M7zJPYWT@cluster0.luqz6xt.mongodb.net/practice?retryWrites=true&w=majority";
+  "mongodb+srv://shubhamshiware08:DnulVTN2WexTwiDF@cluster0.bx0cloa.mongodb.net/practice?retryWrites=true&w=majority";
 
 const dbConnect = () => {
   return mongoose.connect(mongoUri, {
@@ -43,7 +43,8 @@ const dbConnect = () => {
     useUnifiedTopology: true,
   });
 };
-
+//shubhamshiware08
+//DnulVTN2WexTwiDF
 dbConnect()
   .then((data) => {
     app.listen("8080", () => {
