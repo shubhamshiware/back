@@ -1,0 +1,44 @@
+
+
+<ul class="people_list">
+  {{#each list}}
+
+
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">About</th>
+       <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{this.id}}</th>
+      <td>{{this.name}}</td>
+      <td>{{this.email}}</td>
+      <td>{{this.about}}</td>
+      
+      
+      
+      <td><a href="/curd/{{this.id}}" class="btn btn-info"  >Edit</a></td>
+
+
+      <form method="post" action="/curd/delete">
+      <input type="hidden" name="id" value={{this.id}} />
+<td><button class="btn btn-danger" type="submit" class="btn btn-primary">Delete</button></td>
+      </form>
+      
+    </tr>
+     </tbody>
+</table>
+   
+  {{/each}}
+</ul>
+<form method="get" action="/curd">
+<button type="submit" class="btn btn-primary">Go To Form</button>
+
+</form>
